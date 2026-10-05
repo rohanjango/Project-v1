@@ -1,0 +1,18 @@
+{
+  "student": {
+    "past": {
+      "stream": "PCM",
+      "strong_subjects": [
+        "Mathematics",
+        "Physics"
+      ],
+      "academic_level": "above_average",
+      "entrance_exam_status": [
+        {
+          "name": "JEE",
+          "status": "preparing"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "ai_engineer": {
+    "student_stage": "post_12_pre_college",
+    "role": {"role_id": "ai_engineer", "display_name": "AI Engineer"},
+    "academic_background": {"stream":"Science","subjects":["Mathematics","Physics","Chemistry"],"strongest_subjects":["Mathematics","Physics"],"academic_performance":"Above average","entrance_preparation":"JEE"},
+    "present_context": {"interests":["AI & Technology","Research"],"hobbies":["Gaming","Building Things"],"regrets":"I wish I had tried coding earlier."},
+    "skill_dimensions": [
+      {"id":"programming_logic","label":"Programming Logic","importance":"high","question_focus":"Basic experience with code, instructions, patterns, and computational thinking.","preferred_types":["experience","confidence"],"avoid":["PyTorch APIs","deep learning frameworks","advanced system design"]},
+      {"id":"problem_solving","label":"Problem Solving","importance":"high","question_focus":"Ability to break an unfamiliar problem into smaller, manageable steps.","preferred_types":["scenario","confidence"],"avoid":["advanced algorithms","competitive programming theory"]},
+      {"id":"mathematical_reasoning","label":"Mathematical Reasoning","importance":"high","question_focus":"Comfort with patterns, equations, quantities, and logical mathematical thinking.","preferred_types":["confidence","scenario"],"avoid":["linear algebra coursework","calculus techniques","statistics coursework"]},
+      {"id":"technical_curiosity","label":"Technical Curiosity","importance":"medium","question_focus":"Interest in understanding how technology works and experimenting with it.","preferred_types":["interest","behavior"]},
+      {"id":"learning_persistence","label":"Learning Persistence","importance":"medium","question_focus":"Willingness to keep working when a technical problem is initially confusing.","preferred_types":["behavior","scenario"]}
+    ]
+  },
+  "product_manager": {
+    "student_stage": "post_12_pre_college",
+    "role": {"role_id": "product_manager", "display_name": "Product Manager"},
+    "academic_background": {"stream":"Commerce","subjects":["Economics","English / Communications"],"strongest_subjects":["Economics"],"academic_performance":"Strong","entrance_preparation":"Not attempted"},
+    "present_context": {"interests":["Business","Writing & Communication"],"hobbies":["Debating","Content Creation"],"regrets":"I wish I had explored how products are built."},
+    "skill_dimensions": [
+      {"id":"problem_framing","label":"Problem Framing","importance":"high","question_focus":"Ability to understand what problem actually needs solving before jumping to a solution.","preferred_types":["scenario","confidence"]},
+      {"id":"communication","label":"Communication","importance":"high","question_focus":"Clarity when explaining ideas, decisions, and trade-offs.","preferred_types":["confidence","scenario"]},
+      {"id":"user_empathy","label":"User Empathy","importance":"high","question_focus":"Interest in understanding what another person needs, feels, or finds difficult.","preferred_types":["scenario","interest"]},
+      {"id":"decision_making","label":"Decision Making","importance":"medium","question_focus":"How the student compares options when there is no perfect answer.","preferred_types":["scenario","behavior"]},
+      {"id":"analytical_thinking","label":"Analytical Thinking","importance":"medium","question_focus":"Ability to reason from evidence and compare alternatives.","preferred_types":["scenario","confidence"]},
+      {"id":"collaboration","label":"Collaboration","importance":"medium","question_focus":"Comfort listening, negotiating, and working with people who have different views.","preferred_types":["behavior","scenario"]}
+    ]
+  },
+  "product_designer": {
+    "student_stage": "post_12_pre_college",
+    "role": {"role_id": "product_designer", "display_name": "Product Designer"},
+    "academic_background": {"stream":"Humanities / Arts","subjects":["Psychology","English / Communications"],"strongest_subjects":["Psychology"],"academic_performance":"Average","entrance_preparation":"Not attempted"},
+    "present_context": {"interests":["Design & Creativity","Psychology"],"hobbies":["Photography","Drawing"],"regrets":"I wish I had practiced design tools earlier."},
+    "skill_dimensions": [
+      {"id":"visual_thinking","label":"Visual Thinking","importance":"high","question_focus":"Comfort expressing ideas visually and noticing hierarchy, spacing, and clarity.","preferred_types":["confidence","experience"]},
+      {"id":"user_empathy","label":"User Empathy","importance":"high","question_focus":"Ability to imagine what a different person may find clear, confusing, useful, or frustrating.","preferred_types":["scenario","interest"]},
+      {"id":"creative_problem_solving","label":"Creative Problem Solving","importance":"high","question_focus":"Ability to explore more than one possible solution to the same problem.","preferred_types":["scenario","confidence"]},
+      {"id":"observation","label":"Observation","importance":"medium","question_focus":"Tendency to notice small usability or visual details.","preferred_types":["behavior","scenario"]},
+      {"id":"communication","label":"Communication","importance":"medium","question_focus":"Ability to explain a design idea and the reason behind it.","preferred_types":["confidence","scenario"]}
+    ]
+  }
+}

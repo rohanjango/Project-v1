@@ -1,0 +1,26 @@
+:root{--surface:#101319;--low:#191c22;--container:#1d2026;--high:#272a31;--highest:#32353c;--primary:#8ed5ff;--tertiary:#4ee6aa;--outline:#87929a;--text:#e1e2eb}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--surface);color:var(--text)}
+.nav-link{display:inline-flex;align-items:center;padding:.4rem .8rem;border-radius:.55rem;color:#bdc8d1;font-size:.875rem;transition:.16s ease}
+.nav-link:hover{background:var(--high);color:var(--text)}
+.nav-link.active{background:#38bdf8;color:#004965;font-weight:700;box-shadow:0 0 16px -2px rgba(56,189,248,.35)}
+.heatmap-grid{display:grid;grid-template-columns:repeat(28,minmax(12px,1fr));gap:5px;align-items:center}
+.heat-cell{display:inline-block;width:11px;height:11px;border-radius:3px;background:#32353c}
+.heat-cell.level-0{background:#32353c}
+.heat-cell.level-1{background:rgba(34,201,144,.25)}
+.heat-cell.level-2{background:rgba(34,201,144,.55)}
+.heat-cell.level-3{background:#4ee6aa;box-shadow:0 0 6px rgba(78,230,170,.25)}
+.activity-cell{width:100%;aspect-ratio:1/1;border-radius:3px;background:#32353c}
+.activity-cell[data-level="1"]{background:rgba(34,201,144,.25)}
+.activity-cell[data-level="2"]{background:rgba(34,201,144,.55)}
+.activity-cell[data-level="3"]{background:#4ee6aa;box-shadow:0 0 6px rgba(78,230,170,.25)}
+.activity-cell[data-current="true"]{outline:1px solid rgba(142,213,255,.65);box-shadow:0 0 7px rgba(142,213,255,.45)}
+.skill-row{display:flex;flex-direction:column;gap:4px}
+.skill-track{height:7px;background:#0b0e14;border-radius:999px;overflow:hidden}
+.skill-fill{height:100%;background:#8ed5ff;border-radius:999px;transition:width .5s ease}
+.proof-item{display:flex;align-items:flex-start;gap:12px;position:relative}
+.proof-icon{width:28px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);opacity:0;pointer-events:none;background:#272a31;color:#e1e2eb;border:1px solid #3e484f;padding:10px 14px;border-radius:12px;transition:.2s ease;z-index:100}
+.toast.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:800px){.heatmap-grid{grid-template-columns:repeat(28,18px);overflow:auto}.nav-link{font-size:.75rem;padding:.4rem .6rem}}

@@ -1,0 +1,6 @@
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+
+/* Step 7 helpers */
+.path-card img { background: #1d2026; }
+#selectionModal.hidden { display: none; }
+@media (max-width: 640px) { #routeCardsContainer { gap: 1rem; } }

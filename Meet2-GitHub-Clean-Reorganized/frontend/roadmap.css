@@ -1,0 +1,11 @@
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+
+/* Step 8 dynamic roadmap helpers */
+.roadmap-node-enter{animation:roadmapFade .35s ease both;}
+@keyframes roadmapFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.roadmap-completed .roadmap-card{border-color:rgba(78,230,170,.18);}
+.roadmap-active .roadmap-card{box-shadow:0 0 32px -8px rgba(56,189,248,.25);}
+.roadmap-locked{opacity:.72;}
+
+.toast-visible{transform:translateY(0)!important;opacity:1!important;}

@@ -1,0 +1,20 @@
+{
+  "present": {
+    "interests": [
+      "coding",
+      "problem_solving",
+      "technology"
+    ],
+    "work_preferences": [
+      "building_things",
+      "solving_difficult_problems",
+      "working_independently"
+    ],
+    "learning_preference": "learn_by_building",
+    "current_activities": [
+      "coding",
+      "online_courses",
+      "projects"
+    ]
+  }
+}

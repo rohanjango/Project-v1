@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="shell-type" content="web_blank">
+  <title>Meet 2 — AI Career Diagnostic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <link rel="stylesheet" href="diagnostic.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="app-config.js"></script>
+<script src="skill-map.browser.js"></script>
+<script src="goal-normalizer.js"></script>
+<script src="form5-context.js"></script>
+<script src="question-planner.js"></script>
+<script src="question-quality-guard.js"></script>
+<script src="mock-form5.js"></script>
+<script src="api-client.js"></script>
+<script src="profile-schema-adapter.js"></script>
+<script src="diagnostic.js"></script>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex items-center justify-center selection:bg-primary selection:text-on-primary">
+<main class="w-full max-w-2xl mx-auto px-margin py-space-xl flex flex-col items-center justify-center"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden rounded-xl bg-surface-container-lowest p-space-md sm:p-space-lg shadow-xl">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-24 w-80 h-80 bg-tertiary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 -left-20 w-72 h-72 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header / Top Bar Controls -->
+<header class="relative z-10 flex items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-lg">psychology</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-primary uppercase tracking-wider block">Stage Diagnostic</span>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="stageIndicator">01 <span class="text-outline">/ 05</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="drawerToggleBtn">
+<span class="material-symbols-outlined text-sm">route</span>
+<span class="font-label-badge text-label-badge hidden sm:inline">Path Drawer</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+<span class="font-label-badge text-label-badge">Exit to Home</span>
+</button>
+</div>
+</header>
+<!-- Progress Rail -->
+<div class="relative w-full h-1 bg-surface-container-high rounded-full overflow-hidden mb-space-md">
+<div class="h-full bg-gradient-to-r from-primary-container via-primary to-tertiary rounded-full w-[20%] transition-all duration-500 shadow-[0_0_12px_rgba(56,189,248,0.5)]" id="progressBar"></div>
+</div>
+<!-- Stage Sequence Nav Pills -->
+<nav aria-label="Journey Phases" class="relative z-10 flex items-center gap-2 overflow-x-auto pb-space-sm mb-space-lg scrollbar-none">
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-milestone-marker text-milestone-marker tracking-widest uppercase transition-all shadow-[0_0_16px_rgba(56,189,248,0.35)] shrink-0" data-stage="1">
+<span class="material-symbols-outlined text-xs">radio_button_checked</span>
+        01 Past
+      </button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-outline hover:text-on-surface font-milestone-marker text-milestone-marker tracking-widest uppercase transition-all shrink-0" data-stage="2">
+<span class="material-symbols-outlined text-xs">adjust</span>
+        02 Present
+      </button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-outline hover:text-on-surface font-milestone-marker text-milestone-marker tracking-widest uppercase transition-all shrink-0" data-stage="3">
+<span class="material-symbols-outlined text-xs">adjust</span>
+        03 Future
+      </button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-outline hover:text-on-surface font-milestone-marker text-milestone-marker tracking-widest uppercase transition-all shrink-0" data-stage="4">
+<span class="material-symbols-outlined text-xs">adjust</span>
+        04 Goal
+      </button>
+<button class="stage-nav-pill flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-outline hover:text-on-surface font-milestone-marker text-milestone-marker tracking-widest uppercase transition-all shrink-0" data-stage="5">
+<span class="material-symbols-outlined text-xs">adjust</span>
+        05 Skills
+      </button>
+</nav>
+<!-- Collapsible Drawer (Side Panel / Drawer for Stage Previews) -->
+<div class="hidden fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-40 transition-opacity" id="drawerOverlay"></div>
+<aside class="fixed right-0 top-0 bottom-0 w-80 max-w-full bg-surface-container-low p-space-lg shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between overflow-y-auto" id="stageDrawer">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Journey Blueprint</h2>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" id="drawerCloseBtn">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<!-- Step 1 Preview -->
+<div class="p-3 rounded-lg bg-surface-container-highest text-on-surface shadow-md">
+<div class="flex items-center justify-between text-label-code font-label-code text-primary mb-1">
+<span>STAGE 01 // PAST</span>
+<span class="material-symbols-outlined text-xs">verified</span>
+</div>
+<p class="font-headline-sm text-sm font-semibold text-on-surface">Academic Foundation &amp; Preparation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Academic stream, key subject calibration, overall academic confidence and entrance-exam preparation.</p>
+</div>
+<!-- Step 2 Preview -->
+<div class="p-3 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-label-code font-label-code text-outline mb-1">
+<span>STAGE 02 // PRESENT</span>
+<span class="material-symbols-outlined text-xs">pending</span>
+</div>
+<p class="font-headline-sm text-sm font-semibold text-on-surface">Present Interests &amp; Work Preferences</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Interests, work preferences, learning style and current activities.</p>
+</div>
+<!-- Step 3 Preview -->
+<div class="p-3 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-label-code font-label-code text-outline mb-1">
+<span>STAGE 03 // FUTURE</span>
+<span class="material-symbols-outlined text-xs">pending</span>
+</div>
+<p class="font-headline-sm text-sm font-semibold text-on-surface">Degree Architecture</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">B.Tech vs B.Sc vs Self-paced bootcamp agility and accredited routes.</p>
+</div>
+<!-- Step 4 Preview -->
+<div class="p-3 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-label-code font-label-code text-outline mb-1">
+<span>STAGE 04 // GOAL</span>
+<span class="material-symbols-outlined text-xs">pending</span>
+</div>
+<p class="font-headline-sm text-sm font-semibold text-on-surface">Target Ambition &amp; Discovery</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Definitive role targeting or "I'm not sure yet" guided discovery.</p>
+</div>
+<!-- Step 5 Preview -->
+<div class="p-3 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-label-code font-label-code text-outline mb-1">
+<span>STAGE 05 // SKILLS</span>
+<span class="material-symbols-outlined text-xs">pending</span>
+</div>
+<p class="font-headline-sm text-sm font-semibold text-on-surface">Capability &amp; Confidence Grid</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Quantitative calibration in Python, logic, creative &amp; presentation.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<div class="p-3 rounded-lg bg-surface-container-highest">
+<span class="font-label-code text-label-code text-tertiary block mb-1">DATA PRIVACY ASSURANCE</span>
+<p class="font-body-sm text-body-sm text-outline">Answers calibrate multi-scenario career modeling only. No data sold.</p>
+</div>
+</div>
+</aside>
+<!-- Main Dynamic Card Area -->
+<main class="relative z-10">
+<!-- Stage 1 Content Container -->
+<section class="space-y-space-md" id="stepContent"></section>
+<!-- Simulated AI Live Synthesis Preview Badge -->
+<aside aria-label="AI Live Synthesis" class="mt-space-md p-space-sm rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="relative flex items-center justify-center w-7 h-7 rounded-full bg-primary-container/20 text-primary shrink-0">
+<span class="material-symbols-outlined text-sm animate-spin" style="animation-duration: 6s;">autorenew</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="aiLiveText">
+            Analyzing <span class="text-primary font-semibold">2,400+ career trajectories</span> for PCM graduates in next-gen tech &amp; research...
+          </p>
+</div>
+<span class="font-label-code text-label-code text-tertiary bg-surface-container-high px-2 py-0.5 rounded shrink-0 hidden sm:inline">LIVE SYNTHESIS</span>
+</aside>
+<!-- Bottom Navigation Bar -->
+<footer class="mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Back Button -->
+<button class="w-full sm:w-auto flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors disabled:opacity-30 disabled:pointer-events-none" disabled="" id="backBtn" type="button">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="font-milestone-marker text-milestone-marker uppercase">Back</span>
+</button>
+<!-- Auto-save notification -->
+<div class="flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-xs text-tertiary">cloud_done</span>
+<span class="font-label-badge text-label-badge">Auto-saved to your personal journey profile</span>
+</div>
+<!-- Continue Button -->
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary transition-all font-headline-sm text-sm font-semibold shadow-[0_0_20px_rgba(56,189,248,0.25)] group" id="nextBtn" type="button">
+<span id="nextBtnLabel">Continue to Present (02)</span>
+<span class="font-label-code text-xs bg-on-primary/15 px-1.5 py-0.5 rounded text-on-primary group-hover:bg-on-primary/25 transition-colors hidden md:inline">↵ Enter</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</footer>
+</main>
+</div>
+</div>
+</main>
+</body>
+</html>

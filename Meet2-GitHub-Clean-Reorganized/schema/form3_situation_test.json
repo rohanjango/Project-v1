@@ -1,0 +1,13 @@
+{
+  "college_status": "still_comparing_options",
+  "budget_preference": "prefer_low_cost_options",
+  "relocation": "anywhere_in_india",
+  "priorities": [
+    "strong_technical_skills",
+    "early_internships"
+  ],
+  "time_availability": {
+    "hours_per_week": "5_to_10",
+    "major_current_commitment": "JEE_preparation"
+  }
+}

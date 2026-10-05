@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "engine": "meet2_foundational_skill_mapping",
+  "audience": "students_at_or_just_after_class_12",
+  "principle": "Assess present-day foundational capability, curiosity, and learning readiness. Do not turn future university or job curriculum topics into prerequisites.",
+  "question_limits": {
+    "min_questions": 4,
+    "max_questions": 7,
+    "default_question_count": 5
+  },
+  "global_rules": {
+    "measure_foundations_not_curriculum": true,
+    "avoid_advanced_prerequisites": true,
+    "allow_zero_experience": true,
+    "use_plain_language": true,
+    "avoid_assuming_college_level_knowledge": true,
+    "preferred_question_types": [
+      "confidence",
+      "experience",
+      "scenario",
+      "interest",
+      "behavior"
+    ]
+  },
+  "roles": {
+    "ai_engineer": {
+      "display_name": "AI Engineer",
+      "aliases": [
+        "ai engineer",
+        "ai developer",
+        "artificial intelligence engineer"
+      ],
+      "dimensions": [
+        {
+          "id": "programming_logic",
+          "label": "Programming Logic",
+          "importance": "high",
+          "question_focus": "Basic experience with code, instructions, patterns, and computational thinking.",
+          "preferred_types": [
+            "experience",
+            "confidence"
+          ],
+          "avoid": [
+            "PyTorch APIs",
+            "deep learning frameworks",
+            "advanced system design"
+          ]
+        },
+        {
+          "id": "problem_solving",
+          "label": "Problem Solving",
+          "importance": "high",
+          "question_focus": "Ability to break an unfamiliar problem into smaller, manageable steps.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ],
+          "avoid": [
+            "advanced algorithms",
+            "competitive programming theory"
+          ]
+        },
+        {
+          "id": "mathematical_reasoning",
+          "label": "Mathematical Reasoning",
+          "importance": "high",
+          "question_focus": "Comfort with patterns, equations, quantities, and logical mathematical thinking.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ],
+          "avoid": [
+            "linear algebra coursework",
+            "calculus techniques",
+            "statistics coursework"
+          ]
+        },
+        {
+          "id": "technical_curiosity",
+          "label": "Technical Curiosity",
+          "importance": "medium",
+          "question_focus": "Interest in understanding how technology works and experimenting with it.",
+          "preferred_types": [
+            "interest",
+            "behavior"
+          ]
+        },
+        {
+          "id": "learning_persistence",
+          "label": "Learning Persistence",
+          "importance": "medium",
+          "question_focus": "Willingness to keep working when a technical problem is initially confusing.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "software_engineer": {
+      "display_name": "Software Engineer",
+      "aliases": [
+        "software engineer",
+        "software developer",
+        "developer",
+        "web developer"
+      ],
+      "dimensions": [
+        {
+          "id": "programming_logic",
+          "label": "Programming Logic",
+          "importance": "high",
+          "question_focus": "Experience translating a problem into ordered instructions or code.",
+          "preferred_types": [
+            "experience",
+            "confidence"
+          ]
+        },
+        {
+          "id": "problem_decomposition",
+          "label": "Problem Decomposition",
+          "importance": "high",
+          "question_focus": "Ability to split a large task into smaller steps.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "debugging_mindset",
+          "label": "Debugging Mindset",
+          "importance": "medium",
+          "question_focus": "How the student reacts when something they built does not work.",
+          "preferred_types": [
+            "scenario",
+            "behavior"
+          ]
+        },
+        {
+          "id": "technical_curiosity",
+          "label": "Technical Curiosity",
+          "importance": "medium",
+          "question_focus": "Interest in exploring how apps, websites, and systems work.",
+          "preferred_types": [
+            "interest",
+            "behavior"
+          ]
+        },
+        {
+          "id": "learning_persistence",
+          "label": "Learning Persistence",
+          "importance": "medium",
+          "question_focus": "Persistence during trial-and-error learning.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "data_scientist": {
+      "display_name": "Data Scientist",
+      "aliases": [
+        "data scientist",
+        "data science",
+        "data analyst"
+      ],
+      "dimensions": [
+        {
+          "id": "quantitative_reasoning",
+          "label": "Quantitative Reasoning",
+          "importance": "high",
+          "question_focus": "Comfort interpreting numbers, trends, ratios, and simple quantitative relationships.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ],
+          "avoid": [
+            "advanced statistics formulas",
+            "university probability theory"
+          ]
+        },
+        {
+          "id": "pattern_finding",
+          "label": "Pattern Finding",
+          "importance": "high",
+          "question_focus": "Ability and interest in spotting patterns in information or observations.",
+          "preferred_types": [
+            "scenario",
+            "interest"
+          ]
+        },
+        {
+          "id": "structured_problem_solving",
+          "label": "Structured Problem Solving",
+          "importance": "high",
+          "question_focus": "Ability to turn a vague question into smaller answerable questions.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "curiosity_about_evidence",
+          "label": "Curiosity About Evidence",
+          "importance": "medium",
+          "question_focus": "Tendency to ask what the evidence actually shows before reaching a conclusion.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "communication_of_findings",
+          "label": "Communication of Findings",
+          "importance": "medium",
+          "question_focus": "Ability to explain a conclusion clearly to another person.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "product_manager": {
+      "display_name": "Product Manager",
+      "aliases": [
+        "product manager",
+        "product management",
+        "pm"
+      ],
+      "dimensions": [
+        {
+          "id": "problem_framing",
+          "label": "Problem Framing",
+          "importance": "high",
+          "question_focus": "Ability to understand what problem actually needs solving before jumping to a solution.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "importance": "high",
+          "question_focus": "Clarity when explaining ideas, decisions, and trade-offs.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        },
+        {
+          "id": "user_empathy",
+          "label": "User Empathy",
+          "importance": "high",
+          "question_focus": "Interest in understanding what another person needs, feels, or finds difficult.",
+          "preferred_types": [
+            "scenario",
+            "interest"
+          ]
+        },
+        {
+          "id": "decision_making",
+          "label": "Decision Making",
+          "importance": "medium",
+          "question_focus": "How the student compares options when there is no perfect answer.",
+          "preferred_types": [
+            "scenario",
+            "behavior"
+          ]
+        },
+        {
+          "id": "analytical_thinking",
+          "label": "Analytical Thinking",
+          "importance": "medium",
+          "question_focus": "Ability to reason from evidence and compare alternatives.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "collaboration",
+          "label": "Collaboration",
+          "importance": "medium",
+          "question_focus": "Comfort listening, negotiating, and working with people who have different views.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "product_designer": {
+      "display_name": "Product Designer",
+      "aliases": [
+        "product designer",
+        "designer",
+        "ux designer",
+        "ui ux designer",
+        "ui designer",
+        "design"
+      ],
+      "dimensions": [
+        {
+          "id": "visual_thinking",
+          "label": "Visual Thinking",
+          "importance": "high",
+          "question_focus": "Comfort expressing ideas visually and noticing hierarchy, spacing, and clarity.",
+          "preferred_types": [
+            "confidence",
+            "experience"
+          ]
+        },
+        {
+          "id": "user_empathy",
+          "label": "User Empathy",
+          "importance": "high",
+          "question_focus": "Ability to imagine what a different person may find clear, confusing, useful, or frustrating.",
+          "preferred_types": [
+            "scenario",
+            "interest"
+          ]
+        },
+        {
+          "id": "creative_problem_solving",
+          "label": "Creative Problem Solving",
+          "importance": "high",
+          "question_focus": "Ability to explore more than one possible solution to the same problem.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "observation",
+          "label": "Observation",
+          "importance": "medium",
+          "question_focus": "Tendency to notice small usability or visual details.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "importance": "medium",
+          "question_focus": "Ability to explain a design idea and the reason behind it.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        },
+        {
+          "id": "design_curiosity",
+          "label": "Design Curiosity",
+          "importance": "medium",
+          "question_focus": "Interest in understanding why interfaces, products, and visual systems feel effective or ineffective.",
+          "preferred_types": [
+            "interest",
+            "behavior"
+          ]
+        }
+      ]
+    },
+    "researcher": {
+      "display_name": "Researcher",
+      "aliases": [
+        "researcher",
+        "research",
+        "r&d"
+      ],
+      "dimensions": [
+        {
+          "id": "curiosity",
+          "label": "Curiosity",
+          "importance": "high",
+          "question_focus": "Drive to ask questions and explore topics beyond the immediate answer.",
+          "preferred_types": [
+            "interest",
+            "behavior"
+          ]
+        },
+        {
+          "id": "critical_thinking",
+          "label": "Critical Thinking",
+          "importance": "high",
+          "question_focus": "Ability to compare claims, evidence, and alternative explanations.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "structured_problem_solving",
+          "label": "Structured Problem Solving",
+          "importance": "high",
+          "question_focus": "Ability to turn a broad question into smaller investigable pieces.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "attention_to_detail",
+          "label": "Attention to Detail",
+          "importance": "medium",
+          "question_focus": "Care when checking information, patterns, and small differences.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "importance": "medium",
+          "question_focus": "Ability to explain what was discovered and why it matters.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "entrepreneur": {
+      "display_name": "Entrepreneur",
+      "aliases": [
+        "entrepreneur",
+        "startup founder",
+        "founder",
+        "business founder"
+      ],
+      "dimensions": [
+        {
+          "id": "initiative",
+          "label": "Initiative",
+          "importance": "high",
+          "question_focus": "Willingness to start something without waiting for perfect instructions.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "problem_finding",
+          "label": "Problem Finding",
+          "importance": "high",
+          "question_focus": "Ability to notice problems worth solving in real situations.",
+          "preferred_types": [
+            "scenario",
+            "interest"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "importance": "high",
+          "question_focus": "Ability to explain an idea and persuade another person to understand or try it.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        },
+        {
+          "id": "experimentation",
+          "label": "Experimentation",
+          "importance": "medium",
+          "question_focus": "Willingness to try small tests, learn from feedback, and iterate.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "decision_making",
+          "label": "Decision Making",
+          "importance": "medium",
+          "question_focus": "Comfort choosing a direction with incomplete information.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "resilience",
+          "label": "Resilience",
+          "importance": "medium",
+          "question_focus": "Response to setbacks, rejection, and experiments that do not work.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        }
+      ]
+    },
+    "finance_quant": {
+      "display_name": "Finance / Quant",
+      "aliases": [
+        "finance",
+        "quant",
+        "quant trader",
+        "quantitative finance",
+        "finance / quant"
+      ],
+      "dimensions": [
+        {
+          "id": "quantitative_reasoning",
+          "label": "Quantitative Reasoning",
+          "importance": "high",
+          "question_focus": "Comfort with numbers, ratios, trends, and quantitative comparisons.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ],
+          "avoid": [
+            "stochastic calculus",
+            "advanced financial models"
+          ]
+        },
+        {
+          "id": "pattern_finding",
+          "label": "Pattern Finding",
+          "importance": "high",
+          "question_focus": "Ability to spot patterns or anomalies in numerical or logical information.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "logical_reasoning",
+          "label": "Logical Reasoning",
+          "importance": "high",
+          "question_focus": "Ability to reason through multi-step constraints and trade-offs.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "attention_to_detail",
+          "label": "Attention to Detail",
+          "importance": "medium",
+          "question_focus": "Care when checking numerical information and assumptions.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        },
+        {
+          "id": "decision_making",
+          "label": "Decision Making",
+          "importance": "medium",
+          "question_focus": "How the student makes a choice when outcomes are uncertain.",
+          "preferred_types": [
+            "scenario",
+            "behavior"
+          ]
+        }
+      ]
+    },
+    "career_explorer": {
+      "display_name": "Career Explorer",
+      "aliases": [
+        "career explorer",
+        "explore",
+        "not sure"
+      ],
+      "dimensions": [
+        {
+          "id": "curiosity",
+          "label": "Curiosity",
+          "importance": "high",
+          "question_focus": "Interest in exploring unfamiliar subjects, roles, and possibilities.",
+          "preferred_types": [
+            "interest",
+            "behavior"
+          ]
+        },
+        {
+          "id": "problem_solving",
+          "label": "Problem Solving",
+          "importance": "high",
+          "question_focus": "Ability to break an unfamiliar problem into smaller, manageable steps.",
+          "preferred_types": [
+            "scenario",
+            "confidence"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "importance": "medium",
+          "question_focus": "Clarity when explaining ideas and listening to others.",
+          "preferred_types": [
+            "confidence",
+            "scenario"
+          ]
+        },
+        {
+          "id": "learning_persistence",
+          "label": "Learning Persistence",
+          "importance": "medium",
+          "question_focus": "Willingness to keep learning when the first attempt is difficult.",
+          "preferred_types": [
+            "behavior",
+            "scenario"
+          ]
+        }
+      ]
+    }
+  }
+}

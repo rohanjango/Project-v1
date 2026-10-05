@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#e1e0ff", "outline-variant": "#3e484f", "surface-container-high": "#272a31", "surface": "#101319", "on-primary": "#00354a", "inverse-primary": "#00668a", "surface-tint": "#7bd0ff", "on-tertiary": "#003825", "outline": "#87929a", "tertiary-fixed-dim": "#45dfa4", "surface-dim": "#101319", "on-error": "#690005", "on-secondary-container": "#b0b2ff", "surface-variant": "#32353c", "on-secondary": "#1000a9", "on-primary-fixed-variant": "#004c69", "on-primary-container": "#004965", "surface-bright": "#363940", "on-secondary-fixed": "#07006c", "surface-container-low": "#191c22", "tertiary": "#4ee6aa", "surface-container-highest": "#32353c", "on-background": "#e1e2eb", "on-tertiary-fixed-variant": "#005137", "inverse-on-surface": "#2e3037", "primary-container": "#38bdf8", "primary-fixed": "#c4e7ff", "primary": "#8ed5ff", "primary-fixed-dim": "#7bd0ff", "tertiary-container": "#22c990", "on-tertiary-container": "#004e35", "error": "#ffb4ab", "background": "#101319", "error-container": "#93000a", "on-primary-fixed": "#001e2c", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#c0c1ff", "on-tertiary-fixed": "#002114", "surface-container": "#1d2026", "secondary": "#c0c1ff", "surface-container-lowest": "#0b0e14", "on-surface-variant": "#bdc8d1", "tertiary-fixed": "#68fcbf", "on-secondary-fixed-variant": "#2f2ebe", "secondary-container": "#3131c0", "on-surface": "#e1e2eb", "inverse-surface": "#e1e2eb" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "margin": "2rem", "gutter": "1.25rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "label-code": ["JetBrains Mono"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-badge": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "milestone-marker": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "milestone-marker": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><link href="home.css" rel="stylesheet"/><script defer="True" src="home.js"></script><link rel="stylesheet" href="copilot.css"/>
+</head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" href="home.html"><img alt="Meet 2 Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XnQ6g6steoB1m1B-Oxrz7MyVKBpHdQz53QyKU7GO_ZEoZnLdQSDkLEeFYvQNzD2xewdBw7HH-ZFhuIL88hHlPxiXmLki2ZpmtEp3yvZjRpjhS5GPZTSC3GRi9I9r1rREQBjHGOcPzTv32zOKxX1q1aLydoY-BFy9gv8t5gd5fKYo1YZ5uShIFyaGflDXFa8BsKRTN6sZOqm8TWs2NqU532one_ifcg42Q7Zmp9d8sVp8kKPs3P1gR8lPk"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Meet 2</span><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-semibold">v2.4</span></a><nav class="hidden lg:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_-2px_rgba(56,189,248,0.35)]"><a aria-current="page" class="px-space-md py-1.5 transition-all duration-150 bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_-2px_rgba(56,189,248,0.35)]" data-path="home" href="home.html">Home</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="discover-routes" href="routes.html">Discover Routes</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="interactive-roadmap" href="roadmap.html">Interactive Roadmap</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="daily-mission" href="mission.html">Daily Mission</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="progress-dashboard" href="progress.html">Progress Dashboard</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low shadow-[0_0_16px_-4px_rgba(56,189,248,0.25)]"><span class="material-symbols-outlined text-primary text-[16px]">auto_awesome</span><span class="font-label-code text-label-code text-primary">Goal: AI Engineer</span><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span></div><button aria-label="Notifications" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtL6zRj-7Vflw4RpjAoRI3EXjz87YRDjqr_Ycpcbh7obkimKkzPaLqfmc7-eJJ3siFUT6iiMpmOV9h37tSHEw5RcBN0ZMioTD15P26-i_TuKzD1sOSwuhT41dErfjR27ZptTcPvub7_eC5kDHJjqLrALssuHem_MS4AQZd7xa7debclbB7zW7X0dfUOjZQdy2PB1yxzI2xnmk7kSW4NRjRxKs-JR--YUUbwtxPQhU7Rf10FkQvveN_"/><div class="hidden md:flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-medium leading-none">Rohan K.</span><span class="font-label-badge text-label-badge text-outline">Class of '25</span></div></div></div></div></header><main class="w-full pt-16 bg-background flex-1 relative"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Hero Section -->
+<div class="relative w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center pb-space-xl">
+<!-- Left Column: Story & CTA -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-code text-label-code text-primary tracking-wider uppercase">Meet 2 AI Journey Engine • Next-Gen Career Navigation</span>
+</div>
+<!-- Headline -->
+<div class="flex flex-col">
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
+            Your career <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(56,189,248,0.35)]">
+              isn't one path.
+            </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-md">
+            Tell us where you're starting from and where you want to go. We'll help you discover the different paths that can get you there.
+          </p>
+</div>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<button class="group relative px-space-lg py-3.5 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold flex items-center gap-space-xs shadow-[0_0_24px_-4px_rgba(56,189,248,0.45)] hover:shadow-[0_0_32px_0px_rgba(56,189,248,0.7)] transition-all duration-300" id="cta-start-btn" type="button">
+<span>Start My Journey</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="px-space-lg py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm font-semibold flex items-center gap-space-xs transition-all duration-200 shadow-sm" id="cta-preview-btn" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">play_circle</span>
+<span>How It Works</span>
+<span class="font-label-code text-label-code text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest ml-1">2 MIN</span>
+</button>
+</div>
+<!-- Trust Indicators & Social Badges -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-md pt-space-sm">
+<div class="flex items-center -space-x-2">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A portrait photograph of an optimistic Indian high school senior student smiling confidently in a modern studio environment, soft cinematic rim lighting, dark navy and teal backdrop tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhbldGQ_O31l84BunCTor83KuJl8W-f0IplLCSX6KMSE45WlzK1UVTIcGHrvkUdQEvj7dD2bJu5uI4jrF1AtqYj3-izYTv_YWUAy9D1ChWf1d0d1JpaXAePraeptLvaZj7fi1woREFBR6i8HsE2lzpnWrmnieATWvvF4fwnOS8TAkZhnJ8BowWlVy20al6bNKs1_fEFxqOTMHVzbD0WrTDPV6OOatAkF2mnF3RzHaS9mKfqqiQKsS1"/>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A high school STEM female graduate with glasses looking at a holographic code monitor, focused expressions, warm amber and cyan ambient glow, photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvqy5oTKsD9jDUmcsFpNKC_xJHJXLQUs4tUOQIHEu_x9cNm5TF1UQL23srQpAMU8wGGoh6qlKJjRFyWDo-MIvK8E71nqXdAWLTMTvbj8vuvkX3kKPOI3ZP85G1xI6LoYcnq14JqqjAo8amjr3WMgVDizE6F6prEdY0vggx7CNFXaxBS5nevnUwtE0OpmYjaBqfZfIpkewgMPJIhkPOWhoIN42c2NhUicFqzHcCn6ibe58lJcSXvoPt"/>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A creative teenage design student with earphones wearing a slate jacket, thoughtful smile, natural cinematic lighting with subtle cyan accent reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg4OwFoNJQYWqroqaIWtziAQxqd6UVrc4wfoBFgqPZYERZ_izMFP40N24EPWLvrV39z3VJqwwsoQfP57nyZhOO7d-3m1515RxCTxQ5FnyqOTHkPAEk1DY4cbeTZ4yDySoDxpqAiO617WEAuPHnUMN9oackgCtyGf8-7Iq-sv6cVs_-j9z2kyPnm6MIMcz9qX9vsra5Ku4dg7AACLWnJ-x6A4LAv2ArH856icXb-_71b2TNWGUkqO86"/>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A commerce and math student holding a tablet looking upwards towards a bright illuminated screen, deep obsidian shadows with clean rim light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ebWR4U-_E8xn-1vL1Al1SVcfyLcjrWuivb4gHyxdSlqrZorkWIlmSpDILS5hm4owLuUl4UUimkxrdtoD2QiDRSWZeFAzJvwWQhpfjesmogM8QV36RQKIGtJG__YgRsTxstUBvMa396QDZQJJxfcm9XUAdpUnDy5pMY1bdTx__LZmY1idS834sgUtEQSyG_FL2qpcn1HL4Lf6UC2axmXpL3PZ7QaSdVqeOGwGRdR3CH5PlxVAzBJQ"/>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold ml-1">4.96/5</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Trusted by <span class="text-on-surface font-semibold">14,000+ Grade 12 students</span> across Science, Commerce &amp; Arts
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Branching Simulation Glass Card -->
+<div class="lg:col-span-6 flex flex-col">
+<div class="relative w-full rounded-xl bg-surface-container-low p-space-lg shadow-xl overflow-hidden">
+<!-- Glass Header Info -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-code text-label-code text-primary uppercase font-bold">Interactive Route Explorer</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="route-tab-btn active px-space-xs py-1 rounded bg-surface-container-highest text-primary font-label-code text-label-code transition-all" data-route="A" type="button">Route A</button>
+<button class="route-tab-btn px-space-xs py-1 rounded text-outline hover:text-on-surface font-label-code text-label-code transition-all" data-route="B" type="button">Route B</button>
+<button class="route-tab-btn px-space-xs py-1 rounded text-outline hover:text-on-surface font-label-code text-label-code transition-all" data-route="C" type="button">Route C</button>
+</div>
+</div>
+<!-- Branching Canvas Visualization Container -->
+<div class="relative w-full rounded-lg bg-surface-container-lowest p-space-md overflow-hidden">
+<!-- Ambient Background Flow Grid Lines (Inline SVG) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" fill="none" preserveaspectratio="none" viewbox="0 0 540 320">
+<!-- Route A: Teal Curve -->
+<path class="text-primary/70" d="M270 54 C 270 90, 100 100, 100 160 C 100 220, 270 230, 270 270" id="svg-path-a" stroke="currentColor" stroke-dasharray="6 4" stroke-width="2.5"></path>
+<!-- Route B: Indigo Curve -->
+<path class="text-secondary/40" d="M270 54 C 270 90, 270 120, 270 160 C 270 200, 270 230, 270 270" id="svg-path-b" stroke="currentColor" stroke-width="2"></path>
+<!-- Route C: Emerald Curve -->
+<path class="text-tertiary/40" d="M270 54 C 270 90, 440 100, 440 160 C 440 220, 270 230, 270 270" id="svg-path-c" stroke="currentColor" stroke-width="2"></path>
+<!-- Dynamic Particle Pulse along the active curve -->
+<circle class="filter drop-shadow-[0_0_8px_#38bdf8]" cx="100" cy="160" fill="#38bdf8" id="moving-particle" r="4">
+<animatemotion dur="3s" path="M270 54 C 270 90, 100 100, 100 160 C 100 220, 270 230, 270 270" repeatcount="indefinite"></animatemotion>
+</circle>
+</svg>
+<!-- Flow Node Graph (Interactive Blocks) -->
+<div class="relative z-10 flex flex-col items-center gap-space-lg">
+<!-- Stage 1: START -->
+<div class="flex flex-col items-center">
+<div class="px-space-md py-1.5 rounded-full bg-surface-container-high shadow-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">school</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">START // Grade 12 (PCM / CS / Arts)</span>
+</div>
+</div>
+<!-- Stage 2: Degree Intermediate Bridge -->
+<div class="w-full flex justify-center">
+<div class="px-space-md py-1 rounded bg-surface-container flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[14px]">alt_route</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Step 1: Foundational Degree • B.Tech / B.Sc / Self-Led</span>
+</div>
+</div>
+<!-- Stage 3: Three Divergent Routes -->
+<div class="w-full grid grid-cols-3 gap-space-xs">
+<!-- Route Node A -->
+<button class="route-node text-left p-space-sm rounded-lg bg-surface-container transition-all duration-200 hover:bg-surface-container-high group shadow-[0_0_16px_-4px_rgba(56,189,248,0.3)]" id="node-a" type="button">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-primary font-bold">ROUTE A</span>
+<span class="w-2 h-2 rounded-full bg-primary group-hover:scale-125 transition-transform"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight text-[13px]">B.Tech Engg.</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">Tier 1-2 campus &amp; core coding sprints</p>
+</button>
+<!-- Route Node B -->
+<button class="route-node text-left p-space-sm rounded-lg bg-surface-container transition-all duration-200 hover:bg-surface-container-high group opacity-75" id="node-b" type="button">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-secondary font-bold">ROUTE B</span>
+<span class="w-2 h-2 rounded-full bg-secondary group-hover:scale-125 transition-transform"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight text-[13px]">Math &amp; Stats</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">Deep theoretical ML &amp; research labs</p>
+</button>
+<!-- Route Node C -->
+<button class="route-node text-left p-space-sm rounded-lg bg-surface-container transition-all duration-200 hover:bg-surface-container-high group opacity-75" id="node-c" type="button">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-tertiary font-bold">ROUTE C</span>
+<span class="w-2 h-2 rounded-full bg-tertiary group-hover:scale-125 transition-transform"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight text-[13px]">Open-Source</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">App building &amp; Kaggle portfolio</p>
+</button>
+</div>
+<!-- Stage 4: GOAL Terminal Node -->
+<div class="w-full flex flex-col items-center">
+<div class="px-space-lg py-2.5 rounded-xl bg-surface-container-high flex items-center justify-between w-full max-w-sm shadow-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">stars</span>
+<div>
+<span class="font-label-badge text-label-badge text-tertiary font-bold tracking-wider uppercase block">Ultimate Target</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold text-[14px]">AI Engineer / Systems Architect</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-on-surface font-semibold px-2 py-1 rounded bg-surface-container-lowest">$120k+ Base</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Path Telemetry Metrics Card -->
+<div class="mt-space-md p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm transition-all duration-300" id="route-telemetry-panel">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[14px] font-semibold" id="tel-title">Route A: Traditional B.Tech Computer Science</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold" id="tel-badge">FASTEST RECOGNITION</span>
+</div>
+<!-- Metric Progress Gauges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-1">
+<div class="flex flex-col gap-1 p-2 rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-outline text-[11px]">TIME TO MARKET</span>
+<span class="font-label-code text-label-code text-on-surface font-bold" id="tel-time">4.0 Years</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-500" id="bar-time" style="width: 75%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-outline text-[11px]">MATH INTENSITY</span>
+<span class="font-label-code text-label-code text-on-surface font-bold" id="tel-math">Medium (6/10)</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-500" id="bar-math" style="width: 60%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-outline text-[11px]">PRACTICAL CODE</span>
+<span class="font-label-code text-label-code text-on-surface font-bold" id="tel-code">High (8.5/10)</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary transition-all duration-500" id="bar-code" style="width: 85%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-outline text-[11px]">RISK FACTOR</span>
+<span class="font-label-code text-label-code text-on-surface font-bold" id="tel-risk">Low (College Placement)</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container transition-all duration-500" id="bar-risk" style="width: 30%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Dream Role Teaser Rail -->
+<div class="w-full my-space-xl p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-primary uppercase font-semibold tracking-wider">Instant Branch Preview</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Pick your dream role to see diverging paths</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">See how differently 3 real students reached the exact same six-figure position.</p>
+</div>
+<!-- Role Selector Chips -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="role-chip active px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold transition-all duration-200" data-role="ai" type="button">
+          AI Engineer
+        </button>
+<button class="role-chip px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm font-semibold transition-all duration-200" data-role="design" type="button">
+          Product Designer
+        </button>
+<button class="role-chip px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm font-semibold transition-all duration-200" data-role="quant" type="button">
+          Quant Trader
+        </button>
+</div>
+</div>
+<!-- 3 Divergent Live Route Cards Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="role-cards-grid">
+<!-- Card 1 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container transition-all duration-300 hover:bg-surface-container-high shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">ROUTE 01 // ACADEMIC RIGOR</span>
+<span class="font-label-code text-label-code text-outline">4.5 yrs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="card-1-title">B.Tech + Masters in CS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2" id="card-1-desc">
+          Structured coursework, algorithms, campus recruitment pipelines, and collegiate IEEE paper publications.
+        </p>
+<div class="mt-space-md pt-space-sm flex flex-col gap-2 bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Curriculum Freedom</span>
+<span class="text-on-surface font-semibold">Structured (25%)</span>
+</div>
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Institutional Credibility</span>
+<span class="text-tertiary font-semibold">Maximum (98%)</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Recommended for: High Exam Test Scorers</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container transition-all duration-300 hover:bg-surface-container-high shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary/10 text-secondary font-bold">ROUTE 02 // HYBRID INTERDISCIPLINARY</span>
+<span class="font-label-code text-label-code text-outline">3.5 yrs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="card-2-title">B.Sc Applied Math + Self Code</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2" id="card-2-desc">
+          Deep computational linear algebra, remote open-source bounties, and specialized HuggingFace fine-tuning projects.
+        </p>
+<div class="mt-space-md pt-space-sm flex flex-col gap-2 bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Theoretical Depth</span>
+<span class="text-tertiary font-semibold">Supreme (94%)</span>
+</div>
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Tuition Cost</span>
+<span class="text-on-surface font-semibold">Low (-60% vs B.Tech)</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Recommended for: Pure Math &amp; Logic Lovers</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">insights</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container transition-all duration-300 hover:bg-surface-container-high shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold">ROUTE 03 // BUILDER APPRENTICE</span>
+<span class="font-label-code text-label-code text-outline">2.5 yrs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="card-3-title">Bootcamp + YC Startup Intern</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2" id="card-3-desc">
+          Skip standard 4-year lectures. Ship real AI agents directly to GitHub, earn paid contracts, and enter via portfolio proof.
+        </p>
+<div class="mt-space-md pt-space-sm flex flex-col gap-2 bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Speed to Earning</span>
+<span class="text-tertiary font-semibold">Immediate (18 mos)</span>
+</div>
+<div class="flex justify-between items-center text-[12px] font-label-code">
+<span class="text-outline">Self-Discipline Needed</span>
+<span class="text-error font-semibold">Extreme (99%)</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Recommended for: Relentless Self-Starters</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">rocket_launch</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Three Core Philosophy Pillars -->
+<div class="w-full flex flex-col gap-space-lg my-space-xl">
+<div class="flex flex-col max-w-2xl">
+<span class="font-label-code text-label-code text-primary uppercase font-bold tracking-widest">Architectural Pillars</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Built for clarity in a world of conflicting advice</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every student deserves strategic foresight instead of standardized fear.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-low shadow-lg relative overflow-hidden group hover:bg-surface-container transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">fork_right</span>
+</div>
+<span class="font-label-code text-label-code text-primary font-bold">PILLAR 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Multiple Paths</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          There isn't always one correct route. Compare traditional collegiate vs non-linear apprenticeships side-by-side with transparent trade-offs in debt, time, and emotional toll.
+        </p>
+<!-- Inline Visual: Route comparison mini-bar chart -->
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-code font-label-code">
+<span class="text-on-surface-variant">Traditional Track</span>
+<span class="text-outline">4 Years • $45k</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-4/5 h-full bg-outline"></div>
+</div>
+<div class="flex items-center justify-between text-label-code font-label-code mt-2">
+<span class="text-primary font-bold">Meet 2 Optimized Track</span>
+<span class="text-primary font-bold">2.5 Years • $12k</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-3/5 h-full bg-primary shadow-[0_0_8px_rgba(56,189,248,0.8)]"></div>
+</div>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-low shadow-lg relative overflow-hidden group hover:bg-surface-container transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">psychology</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">PILLAR 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Personalized Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Powered by multi-factor reasoning across your past regrets, present eccentric hobbies, and future aspirations. Not an aptitude test from 1998, but adaptive graph models.
+        </p>
+<!-- Inline Visual: Multi-factor reasoning chip lattice -->
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-lowest flex flex-wrap gap-1.5 items-center">
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-label-code">Math Anxiety: Low</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-code text-label-code">Spatial Logic: 98th%</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-secondary font-label-code text-label-code">Prefers Remote</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-tertiary font-label-code text-label-code">Fin-Aid Dependent</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-outline font-label-code text-label-code">Builds Games in Unity</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-low shadow-lg relative overflow-hidden group hover:bg-surface-container transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[28px]">calendar_today</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold">PILLAR 03</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Actionable Every Morning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Never get stuck on abstract 5-year manifestos. Wake up to daily bite-sized micro-missions and track momentum through a live GitHub-style consistency heatmap.
+        </p>
+<!-- Inline Visual: Heatmap Matrix Preview -->
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-2">
+<div class="flex items-center justify-between text-[11px] font-label-code text-outline">
+<span>28-Day Execution Streak</span>
+<span class="text-tertiary font-bold">🔥 14 Days Active</span>
+</div>
+<!-- Grid of activity squares -->
+<div class="grid grid-cols-7 gap-1.5 pt-1">
+<div class="w-full h-3 rounded bg-surface-container-highest"></div>
+<div class="w-full h-3 rounded bg-tertiary/30"></div>
+<div class="w-full h-3 rounded bg-tertiary/60"></div>
+<div class="w-full h-3 rounded bg-tertiary"></div>
+<div class="w-full h-3 rounded bg-tertiary/70"></div>
+<div class="w-full h-3 rounded bg-tertiary/40"></div>
+<div class="w-full h-3 rounded bg-surface-container-highest"></div>
+<div class="w-full h-3 rounded bg-tertiary/50"></div>
+<div class="w-full h-3 rounded bg-tertiary"></div>
+<div class="w-full h-3 rounded bg-tertiary"></div>
+<div class="w-full h-3 rounded bg-tertiary"></div>
+<div class="w-full h-3 rounded bg-tertiary/80"></div>
+<div class="w-full h-3 rounded bg-tertiary/30"></div>
+<div class="w-full h-3 rounded bg-tertiary animate-pulse shadow-[0_0_8px_rgba(78,230,170,0.8)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Interactive Pre-Flight CTA Tray -->
+<div class="relative w-full rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-2xl mb-space-xl overflow-hidden">
+<div class="absolute -left-12 -bottom-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col max-w-xl">
+<span class="font-label-code text-label-code text-primary font-semibold">GET STARTED IN 90 SECONDS</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Ready to chart your divergent roadmap?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        No standardized test scores required. Simply talk through what you love, what you dread, and let JourneyAI calculate the rest.
+      </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row items-center gap-space-md w-full md:w-auto">
+<div class="flex items-center gap-2 px-space-md py-3 rounded-lg bg-surface-container-lowest w-full sm:w-auto shadow-inner">
+<span class="material-symbols-outlined text-outline text-[18px]">terminal</span>
+<input class="bg-transparent border-0 text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-outline w-44" placeholder="Type current grade (e.g. 12th PCM)..." type="text"/>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-3.5 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:brightness-110 transition-all text-center whitespace-nowrap" type="button">
+        Simulate Future →
+      </button>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for Live Branching Simulation -->
+</div></main>
+<div aria-hidden="true" class="how-it-works-modal" id="how-it-works-modal">
+<div class="how-it-works-backdrop" data-modal-close="true"></div>
+<section aria-labelledby="how-it-works-title" aria-modal="true" class="how-it-works-panel" role="dialog">
+<button aria-label="Close How It Works" class="how-it-works-close" id="how-it-works-close" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="how-it-works-eyebrow">MEET 2 // HOW IT WORKS</div>
+<h2 id="how-it-works-title">From uncertainty to an actionable journey.</h2>
+<p>Meet 2 first learns where you are, then turns that context into multiple possible routes and a day-by-day journey.</p>
+<div class="how-it-works-steps">
+<article><span>01</span><h3>Tell us your story</h3><p>Answer five guided questions covering your past, present, future choices, goal, and current skills.</p></article>
+<article><span>02</span><h3>Explore your routes</h3><p>Compare multiple ways of reaching the same target, including trade-offs and different degree or skill-first routes.</p></article>
+<article><span>03</span><h3>Choose your path</h3><p>Select a route and open its interactive roadmap with milestones ordered into a journey.</p></article>
+<article><span>04</span><h3>Keep moving</h3><p>Turn the roadmap into practical daily missions and track progress as you build proof of work.</p></article>
+</div>
+<button class="how-it-works-cta" id="how-it-works-start" type="button">Start My Journey <span class="material-symbols-outlined">arrow_forward</span></button>
+</section>
+</div>
+<footer class="w-full bg-surface-container-lowest mt-auto shadow-[0_-1px_12px_rgba(0,0,0,0.3)]"><div class="max-w-7xl mx-auto px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-gutter"><div class="flex flex-col items-center md:items-start gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Meet 2</span><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded bg-surface-container-high text-outline">AI CO-PILOT</span></div><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">Meet 2 — Your career isn't one path. Powered by JourneyAI.</p></div><div class="flex items-center flex-wrap justify-center gap-space-lg text-on-surface-variant font-body-sm text-body-sm"><a class="hover:text-primary transition-colors" href="diagnostic.html">Diagnostic System</a><a class="hover:text-primary transition-colors" href="routes.html">College Predictor</a><a class="hover:text-primary transition-colors" href="progress.html">Mentorship Rail</a><a class="hover:text-primary transition-colors" href="#">Privacy &amp; Integrity</a></div><div class="font-label-code text-label-code text-outline">SESSION_ID // MT2-2025-RK</div></div></footer><script src="app-config.js"></script>
+<script src="api-client.js"></script>
+<script src="copilot.js"></script>
+</body></html>
